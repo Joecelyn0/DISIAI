@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+*.db
+*.db-journal
+static/mock/out/*.mp3
+static/mock/out/*.mp4
+!static/mock/avatar.mp4
+!static/mock/.gitkeep

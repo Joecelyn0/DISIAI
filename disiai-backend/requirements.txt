@@ -1,0 +1,22 @@
+# Core API
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+
+# Config & validation
+pydantic>=2.9,<3.0
+pydantic-settings>=2.6
+python-dotenv>=1.0
+
+# Local LLM / OpenAI-compatible HTTP calls (Qwen 2.5 via Ollama)
+httpx>=0.27
+
+# Voice: STT + TTS
+faster-whisper>=1.1
+edge-tts>=6.1
+
+# NOTE: SadTalker is not installed via pip. It is expected as an external
+# checkout / lip-sync CLI invoked by handlers/avatar_sadtalker.py.
+# Without SadTalker (or GPU), the handler falls back to a local mock .mp4.
+# NOTE: faster-whisper/ctranslate2 wheels may not exist for Python 3.14;
+# prefer a local venv with Python 3.11/3.12 for the full voice stack.
